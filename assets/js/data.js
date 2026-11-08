@@ -28,6 +28,9 @@ window.SITE = {
     {"title": "«Общажный повар». Спецвыпуск", "sub": "Шоу · режиссёр, продюсер, 15+ выпусков", "en": {"title": "«Dorm Cook». Special Episode", "sub": "Show · director, producer, 15+ episodes"}, "src": "https://vkvideo.ru/video_ext.php?oid=-1388&id=456242558&hd=3&autoplay=1", "poster": "assets/video/covers/povar-tandoor.jpg", "vertical": false, "dur": 488},
   ],
   reels: [
+    {"title": "Клип+@mirea_official", "sub": "Вертикальный контент", "en": {"title": "Clip + @mirea_official", "sub": "Vertical content"}, "src": "https://vkvideo.ru/video_ext.php?oid=-1388&id=456242873&hd=3&autoplay=1", "poster": "assets/video/posters/v13.jpg", "vertical": true, "dur": 6},
+    {"title": "TikTok РТУ МИРЭА", "sub": "Вертикальный контент", "en": {"title": "RTU MIREA TikTok", "sub": "Vertical content"}, "src": "https://vkvideo.ru/video_ext.php?oid=-1388&id=456242703&hd=3&autoplay=1", "poster": "assets/video/posters/v19.jpg", "vertical": true, "dur": 6},
+    {"title": "TikTok РТУ МИРЭА", "sub": "Вертикальный контент", "en": {"title": "RTU MIREA TikTok", "sub": "Vertical content"}, "src": "https://vkvideo.ru/video_ext.php?oid=-1388&id=456242714&hd=3&autoplay=1", "poster": "assets/video/posters/v22.jpg", "vertical": true, "dur": 7},
   ],
 
   // Проекты — список → детальная страница project.html?id=...
