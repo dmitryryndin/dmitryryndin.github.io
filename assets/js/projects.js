@@ -114,6 +114,10 @@ window.PROJECT_PAGES = {
     "assets/img/projects/arctic/break1.jpg",
     "assets/img/projects/arctic/break2.jpg"
   ],
+  "film": {
+    "src": "https://vkvideo.ru/video_ext.php?oid=-1388&id=456242091&hd=3&autoplay=1",
+    "poster": "assets/video/covers/arctic.jpg"
+  },
   "author": {
     "photo": "assets/img/projects/arctic/author.jpg",
     "text": [
