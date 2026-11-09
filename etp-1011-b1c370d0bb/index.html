@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Съёмка 10.11 Научный сотрудник</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Рабочий лист на площадку: читается с телефона, три цветовых блока = три павильона, галочки общие через Firebase */
+  --bg:#f6f8fb; --surface:#ffffff; --ink:#16202e; --muted:#5b6778; --line:#dde3ec;
+  --accent:#3d8fe0; --accent-soft:#e4f0fc;
+  --flo:#2f7d4f; --flo-soft:#e3f3e9;
+  --bee:#a87600; --bee-soft:#fbf2d9;
+  --geo:#8a6a3f; --geo-soft:#f4ece1;
+  --must:#c2410c; --done:#9aa4b2;
+  --display:"Montserrat","Segoe UI",Arial,sans-serif;
+  --body:"Onest","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0f141c; --surface:#161d28; --ink:#e7ecf3; --muted:#9aa6b8; --line:#273242;
+    --accent:#6cb2f5; --accent-soft:#1a2c42;
+    --flo:#6fcf97; --flo-soft:#16291f; --bee:#e7b93c; --bee-soft:#2d2612; --geo:#d5b07c; --geo-soft:#2b241a;
+    --must:#fb923c; --done:#5d6878;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0f141c; --surface:#161d28; --ink:#e7ecf3; --muted:#9aa6b8; --line:#273242;
+  --accent:#6cb2f5; --accent-soft:#1a2c42;
+  --flo:#6fcf97; --flo-soft:#16291f; --bee:#e7b93c; --bee-soft:#2d2612; --geo:#d5b07c; --geo-soft:#2b241a;
+  --must:#fb923c; --done:#5d6878;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--body)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px 80px}
+header{padding:32px 0 18px}
+.kicker{font:700 12px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:800 clamp(26px,4vw,38px)/1.1 var(--display);margin:8px 0 10px;text-wrap:balance}
+h2{font:800 24px/1.2 var(--display);margin:44px 0 14px;text-wrap:balance}
+h3{font:700 16px/1.3 var(--display);margin:22px 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:14px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;flex-wrap:wrap;padding:8px 0}
+nav a{font:700 13.5px/1 var(--display);color:var(--ink);text-decoration:none;padding:8px 10px;border-radius:6px}
+nav a:hover,nav a:focus-visible{background:var(--accent-soft);outline:none}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:760px){.timeline{grid-template-columns:1fr}}
+.slot{border-radius:10px;padding:16px 18px;border:1px solid var(--line);background:var(--surface);border-top:5px solid var(--c)}
+.slot .t{font:800 22px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--c)}
+.slot .n{font:700 16px/1.3 var(--display);margin:6px 0 4px}
+.slot .x{font-size:14px;color:var(--muted)}
+.flo{--c:var(--flo);--cs:var(--flo-soft)} .bee{--c:var(--bee);--cs:var(--bee-soft)} .geo{--c:var(--geo);--cs:var(--geo-soft)}
+.loc{margin-top:44px;border-left:5px solid var(--c);padding-left:16px}
+.loc h2{margin-top:0;color:var(--c)}
+.sub{color:var(--muted);font-size:14.5px;max-width:75ch;margin:0 0 6px}
+.steps{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14.5px;margin:10px 0}
+.steps td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.steps tr:last-child td{border-bottom:0}
+.steps td:first-child{white-space:nowrap;font:700 14px/1.35 var(--display);font-variant-numeric:tabular-nums;color:var(--c);width:120px}
+.text{background:var(--cs);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:14.5px}
+.text b{font-family:var(--display)}
+.text ol{margin:6px 0 0;padding-left:22px}
+.text li{margin:3px 0}
+.group{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 0;margin:10px 0}
+.group h3{margin:10px 16px 4px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.count{font:700 12.5px/1 var(--display);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cl{list-style:none;margin:0;padding:0}
+.cl li{border-top:1px solid var(--line)}
+.cl li:first-child{border-top:0}
+.cl label{display:flex;gap:12px;align-items:flex-start;padding:9px 16px;cursor:pointer}
+.cl input{width:20px;height:20px;margin:1px 0 0;flex:none;accent-color:var(--c)}
+.cl input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cl .d{flex:1}
+.cl .tag{font:700 11px/1 var(--display);color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:4px 6px;border-radius:4px;white-space:nowrap;margin-top:2px}
+.cl .tag.tr{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+.cl .m{color:var(--must);font-weight:700}
+.cl input:checked + .d{color:var(--done);text-decoration:line-through}
+.legend{font-size:13.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.reset{font:600 13px/1 var(--display);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer}
+.reset:focus-visible{outline:2px solid var(--accent)}
+.note{background:var(--accent-soft);border-radius:10px;padding:12px 16px;font-size:14.5px;margin:12px 0}
+.note p{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">ЕТП · Научный сотрудник · план съёмки</div>
+  <h1>Съёмка 10 ноября, ВДНХ</h1>
+  <div class="meta">
+    <span>Герой: Дэниал Юркевич</span>
+    <span>11:00–17:00 на локации, по 2 часа на павильон</span>
+    <span>Павильоны без посетителей</span>
+    <span>Закат 16:25</span>
+  </div>
+</header>
+
+<nav aria-label="Разделы">
+  <a href="#day">Тайминг</a>
+  <a href="#flo">Цветоводство</a>
+  <a href="#bee">Пчеловодство</a>
+  <a href="#geo">Геология</a>
+  <a href="#later">Досъём</a>
+</nav>
+
+<section id="day">
+<h2>Тайминг дня</h2>
+<div class="timeline">
+  <div class="slot flo"><div class="t">11:00–13:00</div><div class="n">№ 29 «Цветоводство и озеленение»</div><div class="x">Интервью, абзацы 1–5. Живая экспозиция, тексты, вопросы посетителей. Красивое начало ролика.</div></div>
+  <div class="slot bee"><div class="t">13:00–15:00</div><div class="n">№ 28 «Пчеловодство»</div><div class="x">Интервью, абзацы 6–8. «Жужжащий мир», макеты, интерактивы, карточка героя.</div></div>
+  <div class="slot geo"><div class="t">15:00–17:00</div><div class="n">№ 31 «Геология»</div><div class="x">Интервью, абзацы 9–10 (финал). Витрины, пустые залы, чучело медведя.</div></div>
+</div>
+<div class="note">
+  <p>Текст согласован, записываем все абзацы целиком. На монтаже вырежем то, что не сможем перекрыть, поэтому <b>перекрытия нужны на каждую фразу</b>.</p>
+  <p><b>Переходы</b> отмечены синей меткой. Ориентир — «Ветеринар»: засветы в белое и проходы через тёмный передний план. Снимаем вживую по 2–3 дубля длиной 5–8 секунд.</p>
+</div>
+<div class="legend">
+  <span><span style="color:var(--must);font-weight:700">●</span> обязательный кадр</span>
+  <span>Метка справа показывает, к какому абзацу кадр</span>
+  <span id="sync">Галочки общие для всех, у кого есть ссылка</span>
+  <button class="reset" type="button" id="reset">Снять все галочки</button>
+</div>
+</section>
+
+<!-- ЦВЕТОВОДСТВО -->
+<section id="flo" class="loc flo">
+<h2>11:00–13:00 · «Цветоводство и озеленение»</h2>
+<p class="sub">Около тысячи растений, террариумы с насекомыми и паукообразными, арт-объекты. Это самая красивая и «живая» картинка дня, на ней строится начало ролика.</p>
+<table class="steps">
+<tr><td>11:00–11:10</td><td>Фасад. Выбор точки под интервью, свет.</td></tr>
+<tr><td>11:10–11:25</td><td>Пока ставят свет: макро обитателей террариумов, зелень, капли.</td></tr>
+<tr><td>11:25–12:15</td><td><b>Интервью, абзацы 1–5</b>: средний и крупный планы, общий на один дубль каждого абзаца.</td></tr>
+<tr><td>12:15–12:50</td><td>Работа героя: кормление, вода, уборка, оборудование, ноутбук.</td></tr>
+<tr><td>12:50–13:00</td><td>Проходки героя, карточка героя (запасной вариант), переходы.</td></tr>
+</table>
+<div class="text">
+  <b>Текст здесь (абзацы 1–5)</b>
+  <ol>
+    <li>«Когда слышат, что я работаю в музее…» — хук про стереотип.</li>
+    <li>«Меня зовут Юркевич Дэниал…» — знакомство.</li>
+    <li>«Рабочий день у меня всегда разный…» — живая экспозиция и экскурсии.</li>
+    <li>«В другой день я могу писать тексты…» — соцсети, вопросы посетителей.</li>
+    <li>«Посетители часто спрашивают…» — клещ, комар, бабочка, пчела.</li>
+  </ol>
+</div>
+
+<div class="group"><h3>Интервью <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="f-i1"><span class="d"><span class="m">●</span> Абзац 1, хук. Минимум 2 дубля, отдельно дубль с паузой перед «Но…»</span><span class="tag">П1</span></label></li>
+  <li><label><input type="checkbox" id="f-i2"><span class="d"><span class="m">●</span> Абзац 2, знакомство. Чисто, без запинок в «Климента Аркадьевича»</span><span class="tag">П2</span></label></li>
+  <li><label><input type="checkbox" id="f-i3"><span class="d"><span class="m">●</span> Абзац 3, рабочий день</span><span class="tag">П3</span></label></li>
+  <li><label><input type="checkbox" id="f-i4"><span class="d"><span class="m">●</span> Абзац 4, тексты и вопросы</span><span class="tag">П4</span></label></li>
+  <li><label><input type="checkbox" id="f-i5"><span class="d"><span class="m">●</span> Абзац 5, вопросы посетителей. Каждый вопрос отдельной фразой с паузой, чтобы на монтаже их можно было переставлять</span><span class="tag">П5</span></label></li>
+  <li><label><input type="checkbox" id="f-i6"><span class="d">Общий план с окружением на каждый абзац</span><span class="tag">все</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Живая экспозиция: работа героя <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="f-w1"><span class="d"><span class="m">●</span> Кормление обитателей: общий, руки с пинцетом, макро корма и животного</span><span class="tag">П3</span></label></li>
+  <li><label><input type="checkbox" id="f-w2"><span class="d"><span class="m">●</span> Смена воды: поилка, струя, опрыскиватель в рапиде</span><span class="tag">П3</span></label></li>
+  <li><label><input type="checkbox" id="f-w3"><span class="d"><span class="m">●</span> Уборка террариума: руки, совок или салфетка, открытая дверца</span><span class="tag">П3</span></label></li>
+  <li><label><input type="checkbox" id="f-w4"><span class="d"><span class="m">●</span> Контроль оборудования: термометр, гигрометр, лампа, таймер. Взгляд героя и деталь прибора</span><span class="tag">П3</span></label></li>
+  <li><label><input type="checkbox" id="f-w5"><span class="d">Реакция героя: наблюдает за животным через стекло, лицо через отражение</span><span class="tag">П3</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Тексты и вопросы <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="f-t1"><span class="d"><span class="m">●</span> Ноутбук: средний план героя, крупно экран с постом и пальцы на клавиатуре</span><span class="tag">П4</span></label></li>
+  <li><label><input type="checkbox" id="f-t2"><span class="d"><span class="m">●</span> Сверяется с научной книгой или определителем: страницы, палец по строке</span><span class="tag">П4</span></label></li>
+  <li><label><input type="checkbox" id="f-t6"><span class="d">Листочки, разложенные на столе, сверху (флэтлей)</span><span class="tag">П5</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Атмосфера и хук <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="f-a7"><span class="d"><span class="m">●</span> Фасад</span><span class="tag">улица</span></label></li>
+  <li><label><input type="checkbox" id="f-a1"><span class="d"><span class="m">●</span> Макро обитателей: паук, жук, палочник</span><span class="tag">хук</span></label></li>
+  <li><label><input type="checkbox" id="f-a2"><span class="d"><span class="m">●</span> Общие планы павильона: зелень, свет, инсталляции, медленный слайдер</span><span class="tag">П1–П2</span></label></li>
+  <li><label><input type="checkbox" id="f-a3"><span class="d"><span class="m">●</span> Проходка героя сквозь зелень на камеру, листья на переднем плане</span><span class="tag">П2</span></label></li>
+  <li><label><input type="checkbox" id="f-a4"><span class="d">Детали растений: капли, текстуры листьев, свет на контровом</span><span class="tag">запас</span></label></li>
+  <li><label><input type="checkbox" id="f-a5"><span class="d">Карточка героя, запасной вариант: стоит в зелени, смотрит в камеру, 6 секунд статики</span><span class="tag">карточка</span></label></li>
+  <li><label><input type="checkbox" id="f-a6"><span class="d">Герой со спины уходит вглубь павильона, для склейки</span><span class="tag">запас</span></label></li>
+  <li><label><input type="checkbox" id="f-p1"><span class="d"><span class="m">●</span> Переходы</span><span class="tag tr">переход</span></label></li>
+</ul></div>
+</section>
+
+<!-- ПЧЕЛОВОДСТВО -->
+<section id="bee" class="loc bee">
+<h2>13:00–15:00 · «Пчеловодство»</h2>
+<p class="sub">Выставка «Жужжащий мир», которую делал герой: гигантские макеты насекомых, голограммы, VR, лаборатория. Здесь снимаем его гордость и перекрытия на вопросы из абзаца 5.</p>
+<table class="steps">
+<tr><td>13:00–13:10</td><td>Фасад. Выбор точки под интервью.</td></tr>
+<tr><td>13:10–13:20</td><td><b>Карточка героя</b> у гигантского макета (основной вариант).</td></tr>
+<tr><td>13:20–13:50</td><td>Экспозиция: общие, макеты, интерактивы. Параллельно ставим свет.</td></tr>
+<tr><td>13:50–14:30</td><td><b>Интервью, абзацы 6–8.</b></td></tr>
+<tr><td>14:30–15:00</td><td>Герой и интерактивы, лаборатория, коллеги, проходки, соты, переходы.</td></tr>
+</table>
+<div class="text">
+  <b>Текст здесь (абзацы 6–8)</b>
+  <ol start="6">
+    <li>«Я работал над экспозицией „Жужжащий мир“…» — две трети видов животных составляют насекомые.</li>
+    <li>«Разработкой павильона мы занимались…» — команда, «диплом по птицам».</li>
+    <li>«Биологические музеи часто завлекают…» — интерактивность.</li>
+  </ol>
+</div>
+
+<div class="group"><h3>Интервью и карточка <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="b-w10"><span class="d"><span class="m">●</span> Фасад</span><span class="tag">улица</span></label></li>
+  <li><label><input type="checkbox" id="b-i0"><span class="d"><span class="m">●</span> Карточка героя: стоит у гигантского макета насекомого, взгляд в камеру, руки скрещены или в карманах, 6 секунд статики. Оставить место под ленту-петлю и плашку</span><span class="tag">карточка</span></label></li>
+  <li><label><input type="checkbox" id="b-i1"><span class="d"><span class="m">●</span> Абзац 6, «Жужжащий мир». Фраза про две трети отдельным дублем</span><span class="tag">П6</span></label></li>
+  <li><label><input type="checkbox" id="b-i2"><span class="d"><span class="m">●</span> Абзац 7, команда. «Диплом по птицам» с паузой: здесь будет шутка</span><span class="tag">П7</span></label></li>
+  <li><label><input type="checkbox" id="b-i3"><span class="d"><span class="m">●</span> Абзац 8, интерактивность. «Потрогать, понюхать, послушать» раздельно, с паузами</span><span class="tag">П8</span></label></li>
+  <li><label><input type="checkbox" id="b-i4"><span class="d">Общий план с макетом на каждый абзац</span><span class="tag">все</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Экспозиция <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="b-e1"><span class="d"><span class="m">●</span> Название «Жужжащий мир» и вход в выставку</span><span class="tag">П6</span></label></li>
+  <li><label><input type="checkbox" id="b-e2"><span class="d"><span class="m">●</span> Общий план зала сверху или с высокой точки, медленный проезд</span><span class="tag">П6</span></label></li>
+  <li><label><input type="checkbox" id="b-e3"><span class="d"><span class="m">●</span> Гигантские макеты: проезд, детали (глаза, лапки, крылья), низкий ракурс</span><span class="tag">П6</span></label></li>
+  <li><label><input type="checkbox" id="b-e4"><span class="d"><span class="m">●</span> Перекрытия вопросов, по одному на каждый: клещ, комар, бабочка, пчела, соты и мёд. Макеты, коллекции, витрины</span><span class="tag">П5</span></label></li>
+  <li><label><input type="checkbox" id="b-e5"><span class="d"><span class="m">●</span> Стена или коллекция насекомых: много видов в кадре для «двух третей»</span><span class="tag">П6</span></label></li>
+  <li><label><input type="checkbox" id="b-e6"><span class="d">Голограммы и VR: свечение экранов, герой в VR-очках</span><span class="tag">П8</span></label></li>
+  <li><label><input type="checkbox" id="b-e7"><span class="d">«Медовый домик», соты, мёд крупно</span><span class="tag">П5</span></label></li>
+  <li><label><input type="checkbox" id="b-p4"><span class="d"><span class="m">●</span> Соты крупно: медленный проезд по шестиугольникам</span><span class="tag">П5–П6</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Работа героя <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="b-w2"><span class="d"><span class="m">●</span> Трогать: руки на тактильном макете, крупно</span><span class="tag">П8</span></label></li>
+  <li><label><input type="checkbox" id="b-w4"><span class="d"><span class="m">●</span> Слушать: наушники или звуковой стенд, реакция</span><span class="tag">П8</span></label></li>
+  <li><label><input type="checkbox" id="b-w5"><span class="d"><span class="m">●</span> Лаборатория: герой за микроскопом, препарат, экран с увеличением. Перекрытие на «исследование» в абзаце 1</span><span class="tag">П1</span></label></li>
+  <li><label><input type="checkbox" id="b-w6"><span class="d"><span class="m">●</span> Герой проверяет и поправляет экспонат, выставляет этикетку</span><span class="tag">П6–П7</span></label></li>
+  <li><label><input type="checkbox" id="b-w7"><span class="d">С коллегами: обсуждают у макета, план экспозиции на столе. Если коллеги придут</span><span class="tag">П7</span></label></li>
+  <li><label><input type="checkbox" id="b-w8"><span class="d"><span class="m">●</span> Проходка героя через зал на камеру, макеты на переднем плане</span><span class="tag">П6</span></label></li>
+  <li><label><input type="checkbox" id="b-p1"><span class="d"><span class="m">●</span> Переходы</span><span class="tag tr">переход</span></label></li>
+</ul></div>
+</section>
+
+<!-- ГЕОЛОГИЯ -->
+<section id="geo" class="loc geo">
+<h2>15:00–17:00 · «Геология»</h2>
+<p class="sub">Выставка «12 признаков живого»: скелеты, чучела, минералы, витрины. Это классический музей, он перекрывает «хожу тихонечко по залам» и фонды. Здесь финал ролика.</p>
+<table class="steps">
+<tr><td>15:00–15:10</td><td>Фасад при последнем дневном свете.</td></tr>
+<tr><td>15:10–15:40</td><td>Пустые залы для стереотипа из абзаца 1, витрины. Параллельно ставим свет.</td></tr>
+<tr><td>15:40–16:15</td><td><b>Интервью, абзацы 9–10.</b></td></tr>
+<tr><td>16:15–17:00</td><td>Витрины и фонды с героем, чучело медведя, книги, переходы.</td></tr>
+</table>
+<div class="text">
+  <b>Текст здесь (абзацы 9–10)</b>
+  <ol start="9">
+    <li>«Конечно, на выставке есть и фондовые предметы…» — витрины, климат, чучело медведя.</li>
+    <li>«Тем, кто хочет работать в музее…» — совет, рупор науки.</li>
+  </ol>
+</div>
+
+<div class="group"><h3>Интервью <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="g-f5"><span class="d"><span class="m">●</span> Фасад</span><span class="tag">улица</span></label></li>
+  <li><label><input type="checkbox" id="g-i1"><span class="d"><span class="m">●</span> Абзац 9, фонды. После «как бы ни хотелось» пауза и улыбка</span><span class="tag">П9</span></label></li>
+  <li><label><input type="checkbox" id="g-i2"><span class="d"><span class="m">●</span> Абзац 10, совет. Крупно, 2–3 дубля. В конце держит взгляд в камеру 3 секунды и улыбается</span><span class="tag">П10</span></label></li>
+  <li><label><input type="checkbox" id="g-i3"><span class="d">Общий план в зале на каждый абзац</span><span class="tag">все</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Стереотип «тихонечко по залам» <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="g-s1"><span class="d"><span class="m">●</span> Пустой зал: медленный тревеллинг вдоль витрин, симметрия</span><span class="tag">П1</span></label></li>
+  <li><label><input type="checkbox" id="g-s2"><span class="d"><span class="m">●</span> Герой со спины медленно идёт по залу, руки за спиной</span><span class="tag">П1</span></label></li>
+</ul></div>
+
+<div class="group"><h3>Фонды и витрины <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="g-v1"><span class="d"><span class="m">●</span> Ценные экспонаты крупно: чучела, скелеты, минералы, кристаллы</span><span class="tag">П9</span></label></li>
+  <li><label><input type="checkbox" id="g-v2"><span class="d"><span class="m">●</span> Датчик температуры или влажности в витрине, свет витрины</span><span class="tag">П9</span></label></li>
+  <li><label><input type="checkbox" id="g-v3"><span class="d"><span class="m">●</span> Чучело медведя</span><span class="tag">П9</span></label></li>
+  <li><label><input type="checkbox" id="g-v4"><span class="d">Этикетка с инвентарным номером крупно</span><span class="tag">П9</span></label></li>
+  <li><label><input type="checkbox" id="g-v5"><span class="d">Чучело птицы для шутки «диплом по птицам»</span><span class="tag">П7</span></label></li>
+  <li><label><input type="checkbox" id="g-f1"><span class="d"><span class="m">●</span> Научная литература: стопка книг, герой листает, делает пометки</span><span class="tag">П10</span></label></li>
+  <li><label><input type="checkbox" id="g-p1"><span class="d"><span class="m">●</span> Переходы</span><span class="tag tr">переход</span></label></li>
+</ul></div>
+</section>
+
+<!-- ДОСЪЁМ -->
+<section id="later" class="loc" style="--c:var(--accent);--cs:var(--accent-soft)">
+<h2>Досъём в другой день: экскурсия</h2>
+<p class="sub">Экскурсию для школьной группы снимаем отдельно. Она перекрывает «ведение экскурсий» в абзаце 3, «завлечь и развлечь» в абзаце 10 и шумный «Жужжащий мир» в хуке. Нужны согласия на съёмку детей; без них снимаем руки, спины и расфокус.</p>
+<div class="group"><h3>Экскурсия <span class="count"></span></h3><ul class="cl">
+  <li><label><input type="checkbox" id="x-1"><span class="d"><span class="m">●</span> Общий план: герой ведёт группу по «Жужжащему миру»</span><span class="tag">П3</span></label></li>
+  <li><label><input type="checkbox" id="x-2"><span class="d"><span class="m">●</span> Герой рассказывает и жестикулирует, средний и крупный планы</span><span class="tag">П3, П10</span></label></li>
+  <li><label><input type="checkbox" id="x-3"><span class="d"><span class="m">●</span> Дети тянут руки, задают вопросы, смеются</span><span class="tag">П10</span></label></li>
+  <li><label><input type="checkbox" id="x-4"><span class="d"><span class="m">●</span> Дети трогают макеты, смотрят в лупы и микроскоп</span><span class="tag">П1, П8</span></label></li>
+  <li><label><input type="checkbox" id="x-5"><span class="d">Герой отвечает на вопрос ребёнка, присев на корточки</span><span class="tag">П4</span></label></li>
+  <li><label><input type="checkbox" id="x-6"><span class="d">Занятие в лаборатории: группа за столами</span><span class="tag">П1</span></label></li>
+</ul></div>
+</section>
+</div>
+
+<script>
+// Локально: сразу показываем последние известные отметки из этого браузера
+(function(){
+  var KEY='etp-nauch-shoot-1011', local={};
+  try{local=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){}
+  document.querySelectorAll('.cl input[type=checkbox]').forEach(function(i){ if(local[i.id]) i.checked=true; });
+  document.querySelectorAll('.group').forEach(function(g){
+    var all=g.querySelectorAll('input[type=checkbox]'),n=0; all.forEach(function(i){if(i.checked)n++;});
+    var c=g.querySelector('.count'); if(c) c.textContent=n+' / '+all.length;
+  });
+})();
+</script>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import { getDatabase, ref, onValue, set, update } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+
+// Настройки проекта Firebase (не секрет: доступ ограничен правилами базы)
+const firebaseConfig = {
+  apiKey: "AIzaSyDXQrGzctspl98XUqJp7O1fu6XuJ9kn7Ko",
+  authDomain: "shoot-lists.firebaseapp.com",
+  databaseURL: "https://shoot-lists-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "shoot-lists",
+  appId: "1:803813008143:web:bfe2bdbf1cf401b618d47a"
+};
+const ROOT = 'etp1011_b1c370d0bb/checks';
+const KEY = 'etp-nauch-shoot-1011';
+
+const boxes = [...document.querySelectorAll('.cl input[type=checkbox]')];
+const syncEl = document.getElementById('sync');
+const setSync = t => { if (syncEl) syncEl.textContent = t; };
+function counts(){
+  document.querySelectorAll('.group').forEach(g => {
+    const all = g.querySelectorAll('input[type=checkbox]'); let n = 0;
+    all.forEach(i => { if (i.checked) n++; });
+    const c = g.querySelector('.count'); if (c) c.textContent = n + ' / ' + all.length;
+  });
+}
+function saveLocal(state){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+
+let db;
+try { db = getDatabase(initializeApp(firebaseConfig)); }
+catch(e){ setSync('Общий список недоступен, галочки сохраняются только в этом браузере'); }
+
+if (db) {
+  setSync('Подключаюсь к общему списку…');
+  const fail = () => setSync('Не удалось сохранить отметку, проверьте интернет');
+  boxes.forEach(i => i.addEventListener('change', () => {
+    counts();
+    set(ref(db, ROOT + '/' + i.id), i.checked ? true : null).catch(fail);
+  }));
+  document.getElementById('reset').addEventListener('click', () => {
+    const upd = {};
+    boxes.forEach(i => { if (i.checked) { i.checked = false; upd[i.id] = null; } });
+    counts();
+    if (Object.keys(upd).length) update(ref(db, ROOT), upd).catch(fail);
+  });
+  onValue(ref(db, ROOT), snap => {
+    const on = snap.val() || {};
+    boxes.forEach(i => { i.checked = !!on[i.id]; });
+    counts(); saveLocal(on);
+  }, () => setSync('Нет доступа к общему списку'));
+  onValue(ref(db, '.info/connected'), s => {
+    setSync(s.val() ? 'Общий список: отметки видны всем, у кого есть ссылка'
+                    : 'Нет связи: отметки сохранятся, когда появится интернет');
+  });
+}
+</script>
+</body>
+</html>
