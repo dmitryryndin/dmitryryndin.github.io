@@ -10,7 +10,8 @@ window.SITE = {
   photos: [],
 
   // Видео — шоурил первым, дальше плитка 16:9, затем вертикальные
-  showreel: { title: "Шоурил 2026", src: "assets/video/showreel.mp4", poster: "assets/video/posters/showreel.jpg", loop: "assets/video/showreel_loop.mp4?2", en: { title: "Showreel 2026" } },
+  showreel: { title: "Шоурил 2026", src: "", srcReady: "assets/video/showreel.mp4",   // шоурил скрыт до готовности (09.11): вернуть — src = srcReady
+    poster: "assets/video/posters/showreel.jpg", loop: "assets/video/showreel_loop.mp4?2", en: { title: "Showreel 2026" } },
   videos: [
     {"title": "Экспедиция в Арктику", "sub": "Документальный фильм", "en": {"title": "Arctic Expedition", "sub": "Documentary"}, "src": "https://vkvideo.ru/video_ext.php?oid=-1388&id=456242091&hd=3&autoplay=1", "poster": "assets/video/covers/arctic.jpg", "vertical": false, "dur": 468},
     {"title": "Фитнес-инструктор", "sub": "«Есть такая профессия» для mos.ru", "en": {"title": "Fitness Instructor", "sub": "«There Is Such a Job» for mos.ru"}, "src": "https://vkvideo.ru/video_ext.php?oid=-243082878&id=456239025&hash=5aa038ed7f1f827f&hd=3&autoplay=1", "poster": "assets/video/covers/etp.jpg", "vertical": false, "dur": 159},

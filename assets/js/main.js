@@ -48,10 +48,33 @@ document.querySelector(".burger").onclick = () => document.querySelector(".nav")
 const modal = document.querySelector(".modal");
 const box = modal.querySelector(".box");
 function openModal(html, cls = "") { box.className = "box " + cls; box.innerHTML = html; modal.classList.add("open"); }
-function closeModal() { box.innerHTML = ""; modal.classList.remove("open"); }
+function closeModal() { box.innerHTML = ""; modal.classList.remove("open"); gallery = null; }
+// Просмотр фото со стрелками: ← → на клавиатуре, свайп на телефоне, кнопки по краям
+let gallery = null;
+function openGallery(srcs, i, count = true) {
+  gallery = { srcs, i, count };
+  openModal(`<img alt=""><button class="gnav prev" aria-label="←">‹</button><button class="gnav next" aria-label="→">›</button><div class="gcount"></div>`, "photo gallery");
+  box.querySelector(".prev").onclick = e => { e.stopPropagation(); step(-1); };
+  box.querySelector(".next").onclick = e => { e.stopPropagation(); step(1); };
+  let x0 = null;
+  box.ontouchstart = e => { x0 = e.touches[0].clientX; };
+  box.ontouchend = e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); };
+  showSlide();
+}
+function step(d) { if (!gallery) return; const n = gallery.srcs.length; gallery.i = (gallery.i + d + n) % n; showSlide(); }
+function showSlide() {
+  const { srcs, i } = gallery, n = srcs.length;
+  box.querySelector("img").src = srcs[i];
+  box.querySelector(".gcount").textContent = gallery.count ? `${i + 1} / ${n}` : "";
+  [srcs[(i + 1) % n], srcs[(i - 1 + n) % n]].forEach(s => { const im = new Image(); im.src = s; });   // соседние — заранее
+}
 modal.querySelector(".close").onclick = closeModal;
 modal.onclick = e => { if (e.target === modal) closeModal(); };
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+  else if (gallery && e.key === "ArrowRight") step(1);
+  else if (gallery && e.key === "ArrowLeft") step(-1);
+});
 
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const fmt = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
@@ -106,10 +129,10 @@ function masonry(el, photos, { endless = false, maxCols = 4 } = {}) {
     }
     return queue.shift();
   };
-  const place = p => {
+  const place = (p, idx = shown.length - 1) => {
     const k = heights.indexOf(Math.min(...heights));
     cols[k].insertAdjacentHTML("beforeend",
-      `<div class="item" data-src="${p.src}" style="aspect-ratio:${p.ratio}"><img src="${thumb(p.src)}" loading="lazy" decoding="async" alt="" onload="this.classList.add('loaded')"></div>`);
+      `<div class="item" data-i="${idx}" data-src="${p.src}" style="aspect-ratio:${p.ratio}"><img src="${thumb(p.src)}" loading="lazy" decoding="async" alt="" onload="this.classList.add('loaded')"></div>`);
     reveal.observe(cols[k].lastElementChild);
     heights[k] += 1 / p.ratio;
   };
@@ -128,7 +151,7 @@ function masonry(el, photos, { endless = false, maxCols = 4 } = {}) {
     }
   };
   el.classList.add("masonry");
-  el.onclick = e => { const it = e.target.closest(".item"); if (it) openModal(`<img src="${it.dataset.src}">`, "photo"); };
+  el.onclick = e => { const it = e.target.closest(".item"); if (it) openGallery((endless ? shown : shown.concat(queue.length ? queue : shuffle(photos.filter(p => !shown.includes(p))))).map(p => p.src), +it.dataset.i, !endless); };   // в экспедиции листаются все фото, даже ещё не подгруженные
   build(); more(21);
   let n = colsFor();
   addEventListener("resize", () => { if (colsFor() !== n) { n = colsFor(); build(); } });
@@ -144,12 +167,12 @@ function pairs(el, photos) {
   const draw = () => {
     const rows = [];
     for (let i = 0; i < photos.length; i += 2) rows.push(photos.slice(i, i + 2));
-    el.innerHTML = rows.map(r => `<div class="prow">${r.map(p => `<div class="item reveal" data-src="${p.src}" style="flex:${p.ratio} 1 0;aspect-ratio:${p.ratio}">
+    el.innerHTML = rows.map((r, ri) => `<div class="prow">${r.map((p, pi) => `<div class="item reveal" data-i="${ri * 2 + pi}" data-src="${p.src}" style="flex:${p.ratio} 1 0;aspect-ratio:${p.ratio}">
       <img src="${thumb(p.src)}" loading="lazy" decoding="async" alt="" onload="this.classList.add('loaded')"></div>`).join("")}</div>`).join("");
     el.querySelectorAll(".item").forEach(it => reveal.observe(it));
   };
   el.classList.add("pairs");
-  el.onclick = e => { const it = e.target.closest(".item"); if (it) openModal(`<img src="${it.dataset.src}">`, "photo"); };
+  el.onclick = e => { const it = e.target.closest(".item"); if (it) openGallery(photos.map(p => p.src), +it.dataset.i); };
   draw();
 }
 
