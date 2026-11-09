@@ -89,6 +89,22 @@ nav a:hover,nav a:focus-visible{background:var(--accent-soft);outline:none}
 .reset:focus-visible{outline:2px solid var(--accent)}
 .note{background:var(--accent-soft);border-radius:10px;padding:12px 16px;font-size:14.5px;margin:12px 0}
 .note p{margin:4px 0}
+
+/* Раскадровка интервью */
+.sb{margin:16px 0 8px}
+.sb h3{margin:18px 0 4px}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+@media (max-width:900px){.board{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.board{grid-template-columns:1fr}}
+.board figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.board figure svg{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.chip{display:flex;justify-content:space-between;gap:8px;padding:9px 12px 8px;font:700 13px/1.2 var(--display)}
+.chip span:last-child{color:var(--muted);font-weight:600;white-space:nowrap}
+.board figcaption{padding:8px 12px 12px;font-size:14px;color:var(--muted)}
+.board figcaption b{color:var(--ink);font-weight:600}
+.sch{background:var(--cs)}
+.sch text{font:600 10px var(--body);fill:var(--ink)}
+.sch .mut{fill:var(--muted);font-weight:500}
 </style>
 </head>
 <body>
@@ -134,7 +150,7 @@ nav a:hover,nav a:focus-visible{background:var(--accent-soft);outline:none}
 <table class="steps">
 <tr><td>11:00–11:10</td><td>Фасад. Выбор точки под интервью, свет.</td></tr>
 <tr><td>11:10–11:25</td><td>Пока ставят свет: макро обитателей террариумов, зелень, капли.</td></tr>
-<tr><td>11:25–12:15</td><td><b>Интервью, абзацы 1–5</b>: средний и крупный планы, общий на один дубль каждого абзаца.</td></tr>
+<tr><td>11:25–12:15</td><td><b>Интервью, абзацы 1–5</b>: общий 35 мм в камеру и крупный 70 мм со стаба, оба на каждый дубль.</td></tr>
 <tr><td>12:15–12:50</td><td>Работа героя: кормление, вода, уборка, оборудование, ноутбук.</td></tr>
 <tr><td>12:50–13:00</td><td>Проходки героя, карточка героя (запасной вариант), переходы.</td></tr>
 </table>
@@ -148,6 +164,8 @@ nav a:hover,nav a:focus-visible{background:var(--accent-soft);outline:none}
     <li>Посетители часто спрашивают: почему клещ не насекомое? Сколько живёт комар? Для чего нужны комары? А есть ли бабочки-однодневки? Из чего пчела делает мёд? Почему пчела умирает после того, как ужалит? После ужаления, кстати, пчела не обязательно гибнет.</li>
   </ol>
 </div>
+
+<div class="sb"><h3>Раскадровка интервью</h3><p class="sub">11:25–12:15. Герой рассказывает в камеру A (35 мм, штатив), B (70 мм) на стабе медленно ходит сбоку. В общем плане герой по центру, зелень обрамляет с двух сторон. B заходит слева от A.</p><div class="board" data-loc="flo"></div></div>
 
 <div class="group"><h3>Интервью <span class="count"></span></h3><ul class="cl">
   <li><label><input type="checkbox" id="f-i1"><span class="d"><span class="m">●</span> Абзац 1, хук. Минимум 2 дубля, отдельно дубль с паузой перед «Но…»</span><span class="tag">П1</span></label></li>
@@ -204,6 +222,8 @@ nav a:hover,nav a:focus-visible{background:var(--accent-soft);outline:none}
   </ol>
 </div>
 
+<div class="sb"><h3>Раскадровка интервью</h3><p class="sub">13:50–14:30. Герой стоит рядом с гигантским макетом пчелы: он на правой трети общего, макет на левой. B заходит справа от A, со свободной стороны.</p><div class="board" data-loc="bee"></div></div>
+
 <div class="group"><h3>Интервью и карточка <span class="count"></span></h3><ul class="cl">
   <li><label><input type="checkbox" id="b-w10"><span class="d"><span class="m">●</span> Фасад</span><span class="tag">улица</span></label></li>
   <li><label><input type="checkbox" id="b-i0"><span class="d"><span class="m">●</span> Карточка героя: стоит у гигантского макета насекомого, взгляд в камеру, руки скрещены или в карманах, 6 секунд статики. Оставить место под ленту-петлю и плашку</span><span class="tag">карточка</span></label></li>
@@ -253,6 +273,8 @@ nav a:hover,nav a:focus-visible{background:var(--accent-soft);outline:none}
   </ol>
   <p class="alt"><b>10, другой вариант (короче):</b> Тем, кто хочет работать в музее, крайне важно уметь работать с научной литературой. Само собой нужно желание работать с людьми, ведь в какой-то степени ты должен быть таким рупором науки. И твоя задача — уметь человека завлечь темой, и в какой-то степени развлечь, но при этом, не потеряв научную ценность своего рассказа.</p>
 </div>
+
+<div class="sb"><h3>Раскадровка интервью</h3><p class="sub">15:40–16:15. В общем плане снова центр: проход между витринами. B слева от A.</p><div class="board" data-loc="geo"></div></div>
 
 <div class="group"><h3>Интервью <span class="count"></span></h3><ul class="cl">
   <li><label><input type="checkbox" id="g-f5"><span class="d"><span class="m">●</span> Фасад</span><span class="tag">улица</span></label></li>
@@ -358,6 +380,225 @@ if (db) {
                     : 'Нет связи: отметки сохранятся, когда появится интернет');
   });
 }
+</script>
+<script>
+(function(){
+  let uid=0;
+  const rng=seed=>{let s=seed;return()=>{s=(s*16807)%2147483647;return (s-1)/2147483646}};
+  const SC={
+    plants:{a:'#12301d',b:'#2f5e3b',bok:'#eef8cf'},
+    hex:{a:'#2b1b05',b:'#6f4a10',bok:'#ffd779'},
+    vitr:{a:'#0d1014',b:'#252a32',bok:'#e3ecf6'}
+  };
+  const f1=n=>(+n).toFixed(1);
+
+  /* Гигантский макет насекомого — фон общего плана в «Пчеловодстве» */
+  function insect(x,y,s){
+    let g=`<g transform="translate(${x},${y}) scale(${s})">`;
+    [[-1,0],[1,0]].forEach(([d])=>{for(let i=0;i<3;i++){const ly=10+i*14;
+      g+=`<path d="M${d*12},${ly} L${d*38},${ly-10+i*6} L${d*50},${ly+22+i*4}" stroke="#1b1206" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`}});
+    g+=`<ellipse cx="-26" cy="-6" rx="34" ry="13" transform="rotate(-25 -26 -6)" fill="#f4f0e6" opacity=".45"/><ellipse cx="26" cy="-6" rx="34" ry="13" transform="rotate(25 26 -6)" fill="#f4f0e6" opacity=".45"/>`;
+    g+=`<ellipse cx="0" cy="60" rx="20" ry="32" fill="#e1a12c"/>`;
+    [44,58,72].forEach(sy=>{g+=`<path d="M-19,${sy} Q0,${sy+6} 19,${sy}" stroke="#1b1206" stroke-width="6" fill="none"/>`});
+    g+=`<circle cx="0" cy="16" r="16" fill="#b9791c"/><circle cx="0" cy="-12" r="12" fill="#2a1a08"/>`;
+    g+=`<path d="M-5,-22 Q-14,-40 -22,-44 M5,-22 Q14,-40 22,-44" stroke="#2a1a08" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
+    return g+`</g>`;
+  }
+
+  function bg(o,id){
+    const type=o.bg, r=rng(o.seed);
+    let s=`<defs><linearGradient id="g${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${SC[type].a}"/><stop offset="1" stop-color="${SC[type].b}"/></linearGradient>`+
+      `<filter id="f${id}" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="${o.blur}"/></filter>`+
+      `<radialGradient id="v${id}" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient></defs>`+
+      `<rect width="320" height="180" fill="url(#g${id})"/><g filter="url(#f${id})">`;
+    if(type==='plants'){
+      const cols=['#3f7d4d','#5c9c5f','#2b5838','#86b86d','#46864f'];
+      for(let i=0;i<40;i++){let x=r()*340-10;const y=r()*200-10,rx=8+r()*24,ry=3+r()*8,a=r()*180;
+        if(o.frameGreen&&x>120&&x<200)x=x<160?x-55:x+55;   // в центре оставляем просвет под героя
+        s+=`<ellipse cx="${f1(x)}" cy="${f1(y)}" rx="${f1(rx)}" ry="${f1(ry)}" transform="rotate(${f1(a)} ${f1(x)} ${f1(y)})" fill="${cols[i%5]}" opacity="${f1(.5+r()*.45)}"/>`}
+    }
+    if(type==='hex'){
+      const R=17,h=R*Math.sqrt(3);
+      for(let row=-1;row<8;row++)for(let col=-1;col<15;col++){
+        const x=col*R*1.5,y=row*h+(col%2?h/2:0);
+        const pts=[0,1,2,3,4,5].map(k=>{const an=Math.PI/3*k;return f1(x+R*.9*Math.cos(an))+','+f1(y+R*.9*Math.sin(an))}).join(' ');
+        const q=r();
+        s+=`<polygon points="${pts}" fill="${q<.3?'#e0a632':q<.6?'#8a5a12':'#4a3009'}" opacity="${f1(.5+r()*.4)}" stroke="#f3c75e" stroke-opacity=".35" stroke-width="1.5"/>`}
+    }
+    if(type==='vitr'){
+      if(o.aisle){ // симметричный проход между витринами
+        s+=`<path d="M0,0 L120,62 L120,150 L0,180Z M320,0 L200,62 L200,150 L320,180Z" fill="#2f353f" opacity=".85"/>`;
+        [[0,10,60,70],[60,42,100,57],[100,58,120,63]].forEach(([x1,y1,x2,y2],i)=>{
+          s+=`<polygon points="${x1},${y1} ${x2},${y2} ${x2},${y2+60-i*12} ${x1},${y1+95-i*20}" fill="#f3ead2" opacity="${.3-i*.06}"/>`;
+          s+=`<polygon points="${320-x1},${y1} ${320-x2},${y2} ${320-x2},${y2+60-i*12} ${320-x1},${y1+95-i*20}" fill="#f3ead2" opacity="${.3-i*.06}"/>`;
+          for(let k=0;k<3;k++){const sx=x1+8+k*(x2-x1-14)/3,sy=y1+28+k*4,c=['#9fc0d6','#d1a46c','#9a7fc2'][(i+k)%3];
+            s+=`<circle cx="${f1(sx)}" cy="${f1(sy)}" r="${4-i}" fill="${c}"/><circle cx="${f1(320-sx)}" cy="${f1(sy)}" r="${4-i}" fill="${c}"/>`}});
+        s+=`<rect x="120" y="62" width="80" height="88" fill="#15191f"/><rect x="138" y="70" width="44" height="40" fill="#e9dfc6" opacity=".18"/>`;
+        s+=`<path d="M0,180 L120,150 L200,150 L320,180Z" fill="#0b0d10" opacity=".7"/>`;
+      }else{
+        for(let i=0;i<6;i++){const x=i*58-6+r()*10,w=34+r()*10;
+          s+=`<rect x="${f1(x)}" y="20" width="${f1(w)}" height="140" fill="#3a414c" opacity=".75"/><rect x="${f1(x)}" y="20" width="${f1(w)}" height="7" fill="#f3ead2" opacity=".6"/>`;
+          for(let k=0;k<4;k++){const sx=x+5+r()*(w-14),sy=38+k*30+r()*10,c=['#9fc0d6','#d1a46c','#9a7fc2','#c9ccd1'][(i+k)%4];
+            s+=`<polygon points="${f1(sx)},${f1(sy+8)} ${f1(sx+4)},${f1(sy)} ${f1(sx+10)},${f1(sy+2)} ${f1(sx+12)},${f1(sy+9)}" fill="${c}"/>`}}
+        s+=`<rect x="0" y="160" width="320" height="20" fill="#07090b" opacity=".6"/>`;
+      }
+    }
+    for(let i=0;i<10;i++){s+=`<circle cx="${f1(r()*320)}" cy="${f1(r()*150)}" r="${f1(3+r()*8)}" fill="${SC[type].bok}" opacity="${f1(.15+r()*.3)}"/>`}
+    s+=`</g>`;
+    if(o.model)s+=insect(118,60,1.05);   // макет стоит рядом с героем, в одной плоскости — резкий
+    return s+`<rect width="320" height="180" fill="url(#v${id})"/>`;
+  }
+
+  const SKIN='#e2c4ab', SKIND='#c39d82', HAIR='#2c2420', SHIRT='#33404f', SHIRTL='#5a687c', SHIRTD='#1c242e', PANTS='#23282f';
+
+  function shadeDef(id,L){
+    return `<defs><linearGradient id="sh${id}" x1="${L<0?1:0}" y1="0" x2="${L<0?0:1}" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".42"/><stop offset=".55" stop-color="#000" stop-opacity=".06"/><stop offset="1" stop-color="#fff" stop-opacity=".12"/></linearGradient></defs>`;
+  }
+
+  /* Голова: dir — куда смотрит (−1 влево, 1 вправо, 0 в объектив), t — поворот лица */
+  function head(cx,top,H,dir,t,smile,id){
+    const W=H*.74, rx=W/2, ry=H/2, eyeY=top+H*.47;
+    const fx=cx+dir*rx*t*.6, es=rx*.36*(1-t*.3);
+    let s='';
+    (dir?[-dir]:[-1,1]).forEach(e=>{s+=`<ellipse cx="${f1(cx+e*rx*.93)}" cy="${f1(eyeY+H*.05)}" rx="${f1(rx*.15)}" ry="${f1(ry*.2)}" fill="${SKIND}"/>`});
+    s+=`<ellipse cx="${f1(cx)}" cy="${f1(top+ry)}" rx="${f1(rx)}" ry="${f1(ry)}" fill="${SKIN}"/>`;
+    s+=`<ellipse cx="${f1(cx)}" cy="${f1(top+ry)}" rx="${f1(rx)}" ry="${f1(ry)}" fill="url(#sh${id})"/>`;
+    s+=`<path d="M${f1(cx-rx*1.04)},${f1(eyeY-H*.05)} C${f1(cx-rx*1.12)},${f1(top-H*.22)} ${f1(cx+rx*1.12)},${f1(top-H*.22)} ${f1(cx+rx*1.04)},${f1(eyeY-H*.05)} L${f1(cx+rx*(dir<0?.92:.8))},${f1(eyeY-H*.11)} Q${f1(fx)},${f1(top+H*.1)} ${f1(cx-rx*(dir>0?.92:.8))},${f1(eyeY-H*.11)}Z" fill="${HAIR}"/>`;
+    [-1,1].forEach(k=>{const ex=fx+k*es;
+      s+=`<path d="M${f1(ex-H*.045)},${f1(eyeY-H*.065)} L${f1(ex+H*.045)},${f1(eyeY-H*.075)}" stroke="${HAIR}" stroke-width="${f1(H*.018)}" stroke-linecap="round"/>`;
+      s+=`<ellipse cx="${f1(ex+dir*H*.008)}" cy="${f1(eyeY)}" rx="${f1(H*.03)}" ry="${f1(H*.019)}" fill="#241c18"/>`});
+    const d=dir||.4;
+    s+=`<path d="M${f1(fx+d*H*.015)},${f1(eyeY+H*.05)} L${f1(fx+d*H*.06)},${f1(eyeY+H*.17)} L${f1(fx)},${f1(eyeY+H*.19)}" stroke="${SKIND}" stroke-width="${f1(H*.02)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    const mx=fx+dir*H*.015, my=top+H*.77, sm=smile?H*.035:H*.012;
+    s+=`<path d="M${f1(mx-H*.075)},${f1(my)} Q${f1(mx)},${f1(my+sm)} ${f1(mx+H*.075)},${f1(my)}" stroke="#9c6a56" stroke-width="${f1(H*.022)}" fill="none" stroke-linecap="round"/>`;
+    return s;
+  }
+
+  /* Крупный план: голова и плечи */
+  function bust(o,id){
+    const {cx,top,H,t}=o, dir=o.dir, L=o.key||dir||-1;
+    const W=H*.74, chin=top+H;
+    const bx=cx-dir*W*.12*t, shY=chin+H*.3, S=W*1.5, Sd=S*(1-.22*t);
+    const sL=dir<0?Sd:S, sR=dir>0?Sd:S, ny=shY-H*.1;
+    let s=shadeDef(id,L);
+    const torso=`M${f1(bx-W*.3)},${f1(ny)} Q${f1(bx-sL*.85)},${f1(ny)} ${f1(bx-sL)},${f1(shY+H*.32)} L${f1(bx-sL*1.06)},190 L${f1(bx+sR*1.06)},190 L${f1(bx+sR)},${f1(shY+H*.32)} Q${f1(bx+sR*.85)},${f1(ny)} ${f1(bx+W*.3)},${f1(ny)}Z`;
+    s+=`<path d="M${f1(cx-W*.2)},${f1(chin-H*.15)} L${f1(cx-W*.23)},${f1(ny+H*.06)} Q${f1(cx)},${f1(ny+H*.16)} ${f1(cx+W*.23)},${f1(ny+H*.06)} L${f1(cx+W*.2)},${f1(chin-H*.15)}Z" fill="${SKIND}"/>`;
+    s+=`<path d="${torso}" fill="${SHIRT}"/><path d="${torso}" fill="url(#sh${id})"/>`;
+    s+=`<path d="M${f1(bx-W*.31)},${f1(ny+H*.01)} L${f1(bx-W*.04)},${f1(ny+H*.3)} M${f1(bx+W*.31)},${f1(ny+H*.01)} L${f1(bx+W*.04)},${f1(ny+H*.3)}" stroke="${SHIRTL}" stroke-width="${f1(H*.035)}" stroke-linecap="round" fill="none"/>`;
+    const lx=bx+(dir||1)*W*.16, ly=ny+H*.2;
+    s+=`<rect x="${f1(lx-H*.02)}" y="${f1(ly)}" width="${f1(H*.04)}" height="${f1(H*.06)}" rx="${f1(H*.01)}" fill="#0b0d10"/>`;
+    return s+head(cx,top,H,dir,t,o.smile,id);
+  }
+
+  /* Общий план: фигура по колено, анфас, k — пикселей на метр */
+  function figure(o,id){
+    const {cx,top,k}=o, H=.235*k, chin=top+H;
+    const shY=top+.30*k, waY=top+.74*k, crY=top+.9*k, sw=.215*k, ww=.165*k;
+    let s=shadeDef(id,o.keyL||-1);
+    s+=`<path d="M${f1(cx-ww*1.04)},${f1(waY-2)} L${f1(cx-ww*1.12)},190 L${f1(cx-.018*k)},190 L${f1(cx-.008*k)},${f1(crY)} L${f1(cx+.008*k)},${f1(crY)} L${f1(cx+.018*k)},190 L${f1(cx+ww*1.12)},190 L${f1(cx+ww*1.04)},${f1(waY-2)}Z" fill="${PANTS}"/>`;
+    const ny=chin+.03*k;
+    const torso=`M${f1(cx-.06*k)},${f1(ny)} Q${f1(cx-sw*.9)},${f1(shY-.03*k)} ${f1(cx-sw)},${f1(shY+.04*k)} L${f1(cx-ww*1.05)},${f1(waY)} L${f1(cx+ww*1.05)},${f1(waY)} L${f1(cx+sw)},${f1(shY+.04*k)} Q${f1(cx+sw*.9)},${f1(shY-.03*k)} ${f1(cx+.06*k)},${f1(ny)}Z`;
+    s+=`<path d="M${f1(cx-.045*k)},${f1(chin-.03*k)} L${f1(cx-.05*k)},${f1(ny+.02*k)} L${f1(cx+.05*k)},${f1(ny+.02*k)} L${f1(cx+.045*k)},${f1(chin-.03*k)}Z" fill="${SKIND}"/>`;
+    s+=`<path d="${torso}" fill="${SHIRT}"/><path d="${torso}" fill="url(#sh${id})"/>`;
+    s+=`<path d="M${f1(cx-.07*k)},${f1(ny)} L${f1(cx)},${f1(ny+.09*k)} L${f1(cx+.07*k)},${f1(ny)}" stroke="${SHIRTL}" stroke-width="${f1(.012*k)}" fill="none" stroke-linejoin="round"/>`;
+    [-1,1].forEach(d=>{
+      const p=`M${f1(cx+d*sw*.9)},${f1(shY+.05*k)} L${f1(cx+d*sw*1.04)},${f1(top+.6*k)} L${f1(cx+d*.05*k)},${f1(top+.73*k)}`;
+      s+=`<path d="${p}" stroke="${SHIRTD}" stroke-width="${f1(.095*k)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+      s+=`<path d="${p}" stroke="${SHIRT}" stroke-width="${f1(.08*k)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    });
+    s+=`<ellipse cx="${f1(cx)}" cy="${f1(top+.735*k)}" rx="${f1(.075*k)}" ry="${f1(.045*k)}" fill="${SKIN}"/><ellipse cx="${f1(cx)}" cy="${f1(top+.735*k)}" rx="${f1(.075*k)}" ry="${f1(.045*k)}" fill="url(#sh${id})"/>`;
+    s+=`<rect x="${f1(cx+.04*k)}" y="${f1(ny+.06*k)}" width="${f1(.02*k)}" height="${f1(.028*k)}" rx="1" fill="#0b0d10"/>`;
+    return s+head(cx,top,H,0,0,false,id);
+  }
+
+  const GRID=`<g stroke="#8fd0ff" stroke-opacity=".7" stroke-width=".8" stroke-dasharray="4 3"><line x1="106.7" y1="0" x2="106.7" y2="180"/><line x1="213.3" y1="0" x2="213.3" y2="180"/><line x1="0" y1="60" x2="320" y2="60"/><line x1="0" y1="120" x2="320" y2="120"/></g>`;
+  const OVL=`<g class="ovl"><rect x="60" y="150" width="200" height="22" rx="3" fill="#000" fill-opacity=".45" stroke="#fff" stroke-dasharray="3 2" stroke-width=".8"/><text x="160" y="164.5" text-anchor="middle" font-size="9" font-family="Montserrat,Arial" font-weight="700" fill="#fff">СУБТИТРЫ</text><rect x="276" y="8" width="36" height="14" rx="3" fill="#000" fill-opacity=".45" stroke="#fff" stroke-dasharray="3 2" stroke-width=".8"/><text x="294" y="18" text-anchor="middle" font-size="8" font-family="Montserrat,Arial" font-weight="700" fill="#fff">mos.ru</text></g>`;
+  const LBL=(x,y,txt,anchor)=>`<text x="${x}" y="${y}" text-anchor="${anchor||'start'}" font-family="Montserrat,Arial" font-weight="700" font-size="8.5" fill="#8fd0ff">${txt}</text>`;
+
+  function gaze(o){
+    const eyeY=o.top+o.H*.47, x0=o.cx+o.dir*(o.H*.37+14), x1=x0+o.dir*30;
+    return `<g stroke="#8fd0ff" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M${f1(x0)},${f1(eyeY)} L${f1(x1)},${f1(eyeY)} M${f1(x1-o.dir*6)},${f1(eyeY-4)} L${f1(x1)},${f1(eyeY)} L${f1(x1-o.dir*6)},${f1(eyeY+4)}"/></g>`+LBL(f1((x0+x1)/2),f1(eyeY-6),'на A','middle');
+  }
+  const DRIFT=`<g stroke="#8fd0ff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18,140 L58,140 M24,135 L18,140 L24,145 M52,135 L58,140 L52,145"/></g>`+LBL(38,131,'стаб','middle');
+
+  function svgWrap(inner,alt){return `<svg viewBox="0 0 320 180" role="img" aria-label="${alt}">${inner}${GRID}</svg>`}
+
+  function frameA(o){const id=++uid;
+    return svgWrap(bg(o,id)+figure(o,id)+LBL(10,15,'ВЗГЛЯД В ОБЪЕКТИВ'),'Общий план, 35 мм, взгляд в камеру');}
+  function frameB(o){const id=++uid;
+    return svgWrap(bg(o,id)+bust(o,id)+gaze(o)+DRIFT,'Крупный план, 70 мм, сбоку');}
+  function frameLens(o){const id=++uid;
+    return svgWrap(bg(o,id)+bust(o,id)+LBL(10,15,'ВЗГЛЯД В ОБЪЕКТИВ'),'Крупный план в объектив');}
+
+  /* Схема сверху. bSide: с какой стороны от оси A стоит B (1 — справа на схеме, −1 — слева) */
+  function scheme(bSide,bgName,o){
+    const m=bSide>0?x=>x:x=>320-x;
+    const H=[160,56], A=[160+(o.aX||0),56+o.aDist*36], I=[A[0]-bSide*22,A[1]+6];
+    const coneDx=Math.tan(27*Math.PI/180)*(A[1]-20);
+    const gl=Math.hypot(A[0]-H[0],A[1]-H[1]), ux=(A[0]-H[0])/gl, uy=(A[1]-H[1])/gl;
+    const dist=String(o.aDist).replace('.',',');
+    const MODEL=o.model?`<g transform="translate(${o.model[0]},${o.model[1]})"><ellipse cx="-10" cy="-2" rx="12" ry="5" transform="rotate(-30 -10 -2)" fill="#fff" fill-opacity=".7" stroke="#8a5a12"/><ellipse cx="10" cy="-2" rx="12" ry="5" transform="rotate(30 10 -2)" fill="#fff" fill-opacity=".7" stroke="#8a5a12"/><ellipse cx="0" cy="6" rx="7" ry="13" fill="#e1a12c" stroke="#5a3a08"/><path d="M-6,4 L6,4 M-6,10 L6,10" stroke="#2a1a08" stroke-width="2.5"/><circle cx="0" cy="-10" r="5" fill="#2a1a08"/></g><text x="${o.model[0]}" y="${o.model[1]+30}" text-anchor="middle">макет пчелы</text>`:'';
+    const R=82, aB=32*Math.PI/180;
+    const B=[m(160+R*Math.sin(aB)),56+R*Math.cos(aB)];
+    const K=[m(160-62*Math.sin(Math.PI/4)),56+62*Math.cos(Math.PI/4)], Bk=[m(214),36];
+    const aLx=A[0]+bSide*16, near=o.aDist<2.5;
+    const ang=p=>Math.atan2(H[0]-p[0],-(H[1]-p[1]))*180/Math.PI;
+    const cam=(p,col)=>`<g transform="translate(${f1(p[0])},${f1(p[1])}) rotate(${f1(ang(p))})"><rect x="-9" y="-3" width="18" height="12" rx="2" fill="${col}"/><rect x="-4" y="-9" width="8" height="7" rx="1" fill="${col}"/></g>`;
+    const lamp=(p)=>`<g transform="translate(${f1(p[0])},${f1(p[1])}) rotate(${f1(ang(p))})"><rect x="-13" y="-3" width="26" height="7" rx="1.5" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.2"/><path d="M-11,-4 L-16,-16 M11,-4 L16,-16" stroke="var(--ink)" stroke-opacity=".35" stroke-dasharray="2 2"/></g>`;
+    const arcP=a=>[m(160+R*Math.sin(a)),56+R*Math.cos(a)];
+    const a1=arcP(18*Math.PI/180), a2=arcP(48*Math.PI/180);
+    const sweep=bSide>0?0:1;
+    return `<svg viewBox="0 0 320 180" class="sch" role="img" aria-label="Схема расстановки сверху">
+      <rect x="10" y="4" width="300" height="15" rx="3" fill="var(--c)" fill-opacity=".25"/>
+      <text x="160" y="15" text-anchor="middle" class="mut">фон: ${bgName}</text>
+      <path d="M${A[0]},${A[1]} L${f1(A[0]-coneDx)},20 M${A[0]},${A[1]} L${f1(A[0]+coneDx)},20" stroke="var(--muted)" stroke-width=".8" stroke-dasharray="3 3" fill="none"/>
+      <text x="${f1(A[0]-bSide*(coneDx+4))}" y="30" text-anchor="${bSide>0?'end':'start'}" class="mut">кадр A</text>
+      ${MODEL}
+      <line x1="${f1(H[0]+ux*14)}" y1="${f1(H[1]+uy*14)}" x2="${f1(A[0]-ux*12)}" y2="${f1(A[1]-uy*12)}" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="4 3"/>
+      <circle cx="160" cy="56" r="12" fill="var(--c)"/>
+      <path d="M${f1(H[0]+ux*20)},${f1(H[1]+uy*20)} L${f1(H[0]+ux*10-uy*6)},${f1(H[1]+uy*10+ux*6)} L${f1(H[0]+ux*10+uy*6)},${f1(H[1]+uy*10-ux*6)}Z" fill="var(--c)"/>
+      <text x="${o.model?178:160+(bSide>0?-16:16)}" y="52" text-anchor="${o.model||bSide<0?'start':'end'}">герой</text>
+      <path d="M${f1(a1[0])},${f1(a1[1])} A${R},${R} 0 0 ${sweep} ${f1(a2[0])},${f1(a2[1])}" stroke="var(--accent)" stroke-width="1.6" fill="none" marker-start="url(#ar)" marker-end="url(#ar)"/>
+      ${cam(A,'var(--ink)')}${cam(B,'var(--accent)')}
+      ${near?`<text x="${A[0]}" y="${A[1]+26}" text-anchor="middle">A · 35, штатив ≈ ${dist} м</text>`:`<text x="${aLx}" y="${A[1]+14}" text-anchor="${bSide>0?'start':'end'}">A · 35, штатив ≈ ${dist} м</text>`}
+      <text x="${f1(B[0]+(bSide>0?16:-16))}" y="${f1(B[1]+4)}" text-anchor="${bSide>0?'start':'end'}">B · 70, стаб ≈ 2,3 м</text>
+      <circle cx="${I[0]}" cy="${I[1]}" r="6" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
+      <text x="${near?I[0]-bSide*4:I[0]-bSide*10}" y="${near?I[1]+30:I[1]+4}" text-anchor="${bSide>0?'end':'start'}" class="mut">интервьюер</text>
+      ${lamp(K)}<text x="${f1(K[0])}" y="${f1(K[1]+26)}" text-anchor="middle" class="mut">ключ</text>
+      ${lamp(Bk)}<text x="${f1(Bk[0]+(bSide>0?18:-18))}" y="${f1(Bk[1]+4)}" text-anchor="${bSide>0?'start':'end'}" class="mut">контра</text>
+    </svg>`;
+  }
+
+  const fig=(chipL,chipR,svg,cap)=>`<figure><div class="chip"><span>${chipL}</span><span>${chipR}</span></div>${svg}<figcaption>${cap}</figcaption></figure>`;
+  const CU=(dir)=>({cx:dir<0?205:115,top:22,H:84,dir,t:.5,blur:4.5});
+
+  const LOCS={
+    flo:{a:{cx:160,top:20,k:150,bg:'plants',frameGreen:true,seed:11,blur:2},b:1,bSide:-1,bg:'plants',bgName:'зелень, террариумы',seed:16,sch:{aDist:2},
+      ac:'<b>Центр, выше колена.</b> Голова в верхней трети, над ней немного воздуха. Зелень обрамляет героя с двух сторон и уходит в глубину ярусами.',
+      bc:'<b>По грудь, герой на левой трети.</b> Смотрит вправо, за кадр, на A. Стаб медленно дрейфует, зелень за спиной плывёт пятнами.'},
+    bee:{a:{cx:214,top:22,k:124,bg:'hex',model:true,seed:23,blur:1.6},b:-1,bSide:1,bg:'hex',bgName:'соты, экспозиция',seed:28,sch:{aDist:2.8,aX:-35,model:[98,42]},
+      ac:'<b>Правая треть, по колено.</b> Вплотную слева гигантский макет пчелы: стоит в одной плоскости с героем, поэтому тоже резкий. Голова не перекрывает макет.',
+      bc:'<b>По грудь, герой на правой трети.</b> B стоит справа от A, со свободной стороны: слева макет, а герой у правого края общего плана. Взгляд уходит влево — направление меняется по сравнению с «Цветоводством».'},
+    geo:{a:{cx:160,top:20,k:150,bg:'vitr',aisle:true,seed:37,blur:1.4},b:1,bSide:-1,bg:'vitr',bgName:'витрины, проход',seed:42,sch:{aDist:2},
+      ac:'<b>Центр, выше колена.</b> Герой стоит в проходе между витринами, линии зала сходятся за его спиной. Симметрия «классического музея».',
+      bc:'<b>По грудь, герой на левой трети.</b> Смотрит вправо, на A. Подсвеченные витрины за спиной превращаются в светлые вертикали. Ключ мягкий, музейную темноту оставляем.'}
+  };
+  const SCH_CAP='A стоит на оси, герой смотрит в его объектив, интервьюер сидит под камерой. B ходит по дуге сбоку и не заходит в конус кадра A. Ключ светит с противоположной от B стороны, контра — сзади со стороны B.';
+
+  document.querySelectorAll('.board').forEach(el=>{
+    const L=LOCS[el.dataset.loc];
+    const b=Object.assign(CU(L.b),{bg:L.bg,seed:L.seed,key:L.b});
+    L.a.keyL=-L.bSide;
+    let h=fig('A · 35 мм · f/1.4','общий, штатив',frameA(L.a),L.ac)+
+          fig('B · 70 мм · f/2','крупный, стаб',frameB(b),L.bc)+
+          fig('Схема сверху','расстановка',scheme(L.bSide,L.bgName,L.sch),SCH_CAP);
+    el.innerHTML=h;
+  });
+
+  // маркер стрелки для дуги стаба
+  document.body.insertAdjacentHTML('beforeend','<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10Z" fill="#3d8fe0"/></marker></defs></svg>');
+
+})();
 </script>
 </body>
 </html>
